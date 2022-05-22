@@ -1,0 +1,31 @@
+<!-- Bem vindo :D -->
+
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function texto(t) {
+
+        document.write(t);
+        pulaLinha();
+    }
+    function calculaImc(peso, altura) {
+
+        var resultadoImc = peso / (altura * altura);
+        return Math.round(resultadoImc);
+    }
+
+
+    var informeNome = prompt("Informe seu nome querido(a)");
+    var alturaInformada = prompt(informeNome + ", Informe sua altura");
+    var pesoInformado = prompt(informeNome + ", Informe seu peso");
+
+    var imc = calculaImc(pesoInformado, alturaInformada);
+
+    texto("O resultado do IMC do(a) " + informeNome + " é " + imc);
+
+</script>
